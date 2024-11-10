@@ -13,7 +13,18 @@ AIDES :
 */
 
 // Insérez votre code ici
+function afficherEnfant(node, index) {
+    if (node.nodeType !== 1){
+        console.log('Type de noeud incorrect');
+        return;
+    }
 
+    if (index < 0 || index > node.childNodes.length){
+        console.log('Indice incorrect');
+    }
+
+    console.log(node.childNodes[index]);
+}
 
 
 

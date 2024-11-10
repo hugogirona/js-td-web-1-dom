@@ -16,7 +16,9 @@ EXERCICE 1 : Afficher dans la console
 - le titre du document
 */
 
-
+console.log(document.head)
+console.log(document.body)
+console.log(document.title)
 
 
 
@@ -37,7 +39,12 @@ Afficher la valeur de la propriété nodeType du body dans la console
 https://developer.mozilla.org/fr/docs/Web/API/Node/nodeType)
 */
 
-
+if(document.body.ELEMENT_NODE) {
+    console.log("body est un noeud élément");
+} else{
+    console.log("body est un noeud textuel");
+}
+console.log(document.body.nodeType);
 
 
 
@@ -57,14 +64,14 @@ Accéder aux enfants d'un nœud. Afficher :
 */
 
 // Affiche le premier enfant du noeud body
-
+console.log(document.body.firstChild);
 
 // Affiche le deuxième enfant du noeud body
-
+console.log(document.body.childNodes[1]);
 
 // Affiche les noeuds enfants du noeud body
 
-
+console.log(document.body.childNodes);
 
 // 4. Accéder au parent d'un nœud
 /*
@@ -79,7 +86,8 @@ Accéder au parent d'un nœud. Afficher
 */
 
 // Affiche le parent du noeud h1
-
+console.log(document.querySelector('h1').parentNode);
 
 
 // Accès au parent du noeud document ?
+console.log(document.parentNode);

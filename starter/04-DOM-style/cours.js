@@ -35,6 +35,15 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Properties_Reference
 	* centrez-y le texte ;
 */
 
+document.querySelector('p').style.color = '#813050';
+document.querySelector('p').style.margin = '1em 0'
+document.querySelector('p').style.backgroundColor = '#D8EFE3';
+document.querySelector('p').style.padding = '.5em';
+document.querySelector('p').style.fontFamily = 'Baskerville, Baskerville Old Face, Garamond, Hoefler Text, Times New Roman, serif';
+document.querySelector('p').style.fontSize = '2em';
+document.querySelector('p').style.width = '5em';
+document.querySelector('p').style.display = 'flex';
+document.querySelector('p').style.justifyContent = 'center';
 
 
 
@@ -52,7 +61,11 @@ Affichez la couleur du texte de chacun des trois paragraphes de la page
 
 // 1. Les limites de la propriété style
 
+const pElt = document.querySelectorAll('p');
 
+for (const pEltElement of pElt) {
+    console.log(pEltElement.style.color);
+}
 
 // 2. La fonction getComputedStyle()
 /*
@@ -64,3 +77,5 @@ La fonction window.getComputedStyle() (https://developer.mozilla.org/fr/docs/Web
 /* EXEFCICE 3 :
 Affichez la police de caractère et la couleur du 3e paragraphe (qui a l'id "para")
 */
+console.log(window.getComputedStyle(document.querySelector('p:nth-child(3)')).fontFamily);
+console.log(window.getComputedStyle(document.querySelector('p:nth-child(3)')).color);

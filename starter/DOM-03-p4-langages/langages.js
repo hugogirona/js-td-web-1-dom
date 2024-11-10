@@ -12,4 +12,10 @@ où le mot "liste" est un lien vers l'URL suivante :
 https://fr.wikipedia.org/wiki/Liste_des_langages_de_programmation.
 */
 
+const ulElt = document.querySelector("#langages");
 
+const liElt = document.createElement("li");
+
+ulElt.appendChild(liElt);
+
+liElt.insertAdjacentHTML("afterbegin", "En voici une <a href='https://fr.wikipedia.org/wiki/Liste_des_langages_de_programmation.\n'>liste</a> plus complète.")
